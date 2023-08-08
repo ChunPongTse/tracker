@@ -28,7 +28,7 @@ export default class CreateTodo extends Component {
 
     console.log(todovar);
 
-    axios.post("http://localhost:5000/todos/add", todovar).then((rec) => {
+    axios.post("https://tracker-backend-k0zm.onrender.com/todos/add", todovar).then((rec) => {
       window.location = "/";
     });
   }
