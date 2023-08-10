@@ -23,7 +23,7 @@ export default class TodosList extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://tracker-backend-k0zm.onrender.com/todos/')
+    axios.get('http://localhost:5000/todos/')
       .then(response => {
         this.setState({ todos: response.data })
       })
@@ -33,7 +33,7 @@ export default class TodosList extends Component {
   }
 
   deleteTodo(id) {
-    axios.delete('https://tracker-backend-k0zm.onrender.com/todos/'+id)
+    axios.delete('http://localhost:5000/todos/'+id)
       .then(response => { console.log(response.data) });
 
     this.setState({
