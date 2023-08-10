@@ -33,14 +33,14 @@ export default class TodosList extends Component {
   }
 
   deleteTodo(id) {
-    axios.delete('http://localhost:5000/todos/'+id)
+    axios.delete('http://localhost:5000/todos/delete/'+id)
       .then(response => { console.log(response.data) });
 
     this.setState({
       todos: this.state.todos.filter(el => el._id !== id)  
     })  
   }
-
+  
   todoList() {
     return this.state.todos.map(currenttodo => {
       return <Todo todo={currenttodo}    
